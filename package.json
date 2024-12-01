@@ -5,6 +5,11 @@
   "repository": "https://github.com/saili-it/Car_Reparation_Managment",
   "author": "medev",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/api/app.js",
+    "dev": "nodemon ./src/api/app.js"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -12,6 +17,8 @@
     "express": "^4.21.1",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.5",
     "winston": "^3.17.0"
   }
