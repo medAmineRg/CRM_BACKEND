@@ -1,4 +1,5 @@
 import RoleEntity from "../models/RoleEntity.js";
+import roleSchemaValidation from "../schema/roleSchemaValidation.js";
 
 // Fetch all roles
 export const getAllRoles = async (req, res) => {
@@ -19,6 +20,10 @@ export const getRoleById = async (req, res) => {
 
 // Create a new role
 export const createRole = async (req, res) => {
+  // validate the request body
+  const { error } = roleSchemaValidation.validate(req.body);
+  if (error) return res.status(400).send({ message: error.details[0].message });
+
   // Logic to create a new role in the database
   const { name } = req.body;
   const role = await RoleEntity.create({ name });
