@@ -197,3 +197,171 @@
 2024-12-01T20:06:47.342Z info: Connection has been established successfully.
 2024-12-01T20:07:48.618Z info: Server is running on port 3000
 2024-12-01T20:07:48.752Z info: Connection has been established successfully.
+2024-12-02T20:50:07.694Z info: Server is running on port 3000
+2024-12-02T20:50:07.733Z error: Unable to connect to the database: password authentication failed for user "Mohamed-Amine"
+2024-12-02T20:50:49.136Z info: Server is running on port 3000
+2024-12-02T20:50:49.168Z error: Unable to connect to the database: password authentication failed for user "Mohamed-Amine"
+2024-12-02T20:54:46.086Z info: Server is running on port 3000
+2024-12-02T20:54:46.213Z info: Connection has been established successfully.
+2024-12-02T20:56:51.492Z info: Server is running on port 3000
+2024-12-02T20:56:51.619Z info: Connection has been established successfully.
+2024-12-02T20:57:35.878Z info: Server is running on port 3000
+2024-12-02T20:57:35.953Z info: Connection has been established successfully.
+2024-12-02T20:58:04.958Z info: Server is running on port 3000
+2024-12-02T20:58:05.057Z info: Connection has been established successfully.
+2024-12-02T20:59:24.347Z info: Server is running on port 3000
+2024-12-02T20:59:24.419Z info: Connection has been established successfully.
+2024-12-02T20:59:25.591Z info: Server is running on port 3000
+2024-12-02T20:59:25.686Z info: Connection has been established successfully.
+2024-12-02T20:59:35.128Z info: Server is running on port 3000
+2024-12-02T20:59:35.239Z info: Connection has been established successfully.
+2024-12-02T21:00:34.961Z info: Server is running on port 3000
+2024-12-02T21:00:35.041Z info: Connection has been established successfully.
+2024-12-02T21:00:42.774Z info: Server is running on port 3000
+2024-12-02T21:00:42.875Z info: Connection has been established successfully.
+2024-12-02T21:00:48.547Z info: Server is running on port 3000
+2024-12-02T21:00:48.650Z info: Connection has been established successfully.
+2024-12-02T21:01:19.248Z info: Server is running on port 3000
+2024-12-02T21:01:19.335Z info: Connection has been established successfully.
+2024-12-02T21:01:21.234Z info: Server is running on port 3000
+2024-12-02T21:01:21.308Z info: Connection has been established successfully.
+2024-12-02T21:01:27.999Z info: Server is running on port 3000
+2024-12-02T21:01:28.098Z info: Connection has been established successfully.
+2024-12-02T21:01:29.142Z info: Server is running on port 3000
+2024-12-02T21:01:29.243Z info: Connection has been established successfully.
+2024-12-02T21:01:32.845Z info: Server is running on port 3000
+2024-12-02T21:01:32.952Z info: Connection has been established successfully.
+2024-12-02T21:01:34.787Z info: Server is running on port 3000
+2024-12-02T21:01:34.914Z info: Connection has been established successfully.
+2024-12-02T21:01:35.898Z info: Server is running on port 3000
+2024-12-02T21:01:36.022Z info: Connection has been established successfully.
+2024-12-02T21:01:37.125Z info: Server is running on port 3000
+2024-12-02T21:01:37.221Z info: Connection has been established successfully.
+2024-12-02T21:01:40.385Z info: Server is running on port 3000
+2024-12-02T21:01:40.482Z info: Connection has been established successfully.
+2024-12-02T21:01:42.820Z info: Server is running on port 3000
+2024-12-02T21:01:44.220Z info: Server is running on port 3000
+2024-12-02T21:01:44.349Z info: Connection has been established successfully.
+2024-12-02T21:01:48.588Z info: Server is running on port 3000
+2024-12-02T21:01:48.738Z info: Connection has been established successfully.
+2024-12-02T21:04:17.270Z info: Server is running on port 3000
+2024-12-02T21:04:17.342Z info: Connection has been established successfully.
+2024-12-02T21:04:22.226Z info: Server is running on port 3000
+2024-12-02T21:04:22.315Z info: Connection has been established successfully.
+2024-12-02T21:04:29.566Z info: Server is running on port 3000
+2024-12-02T21:04:29.670Z info: Connection has been established successfully.
+2024-12-02T21:11:29.894Z info: Server is running on port 3000
+2024-12-02T21:11:29.972Z info: Connection has been established successfully.
+2024-12-02T21:12:06.486Z info: Server is running on port 3000
+2024-12-02T21:12:06.556Z info: Connection has been established successfully.
+2024-12-02T21:12:40.306Z info: Server is running on port 3000
+2024-12-02T21:12:40.399Z info: Connection has been established successfully.
+2024-12-02T21:12:55.103Z info: Server is running on port 3000
+2024-12-02T21:12:55.179Z info: Connection has been established successfully.
+2024-12-02T21:13:21.170Z info: Server is running on port 3000
+2024-12-02T21:13:21.251Z info: Connection has been established successfully.
+2024-12-02T21:13:48.382Z info: Server is running on port 3000
+2024-12-02T21:13:48.452Z info: Connection has been established successfully.
+2024-12-02T21:13:50.595Z info: Server is running on port 3000
+2024-12-02T21:13:50.677Z info: Connection has been established successfully.
+2024-12-02T21:13:53.620Z info: Server is running on port 3000
+2024-12-02T21:13:53.691Z info: Connection has been established successfully.
+2024-12-02T21:13:57.487Z info: Server is running on port 3000
+2024-12-02T21:13:57.687Z info: Connection has been established successfully.
+2024-12-02T21:14:01.232Z info: Server is running on port 3000
+2024-12-02T21:14:01.307Z info: Connection has been established successfully.
+2024-12-02T21:14:51.113Z info: Server is running on port 3000
+2024-12-02T21:14:51.184Z info: Connection has been established successfully.
+2024-12-02T21:14:52.800Z info: Server is running on port 3000
+2024-12-02T21:14:52.880Z info: Connection has been established successfully.
+2024-12-02T21:14:57.571Z info: Server is running on port 3000
+2024-12-02T21:14:57.651Z info: Connection has been established successfully.
+2024-12-02T21:14:59.214Z info: Server is running on port 3000
+2024-12-02T21:14:59.292Z info: Connection has been established successfully.
+2024-12-02T21:15:00.873Z info: Server is running on port 3000
+2024-12-02T21:15:00.951Z info: Connection has been established successfully.
+2024-12-02T21:15:03.646Z info: Server is running on port 3000
+2024-12-02T21:15:03.734Z info: Connection has been established successfully.
+2024-12-02T21:15:06.727Z info: Server is running on port 3000
+2024-12-02T21:15:06.809Z info: Connection has been established successfully.
+2024-12-02T21:15:08.801Z info: Server is running on port 3000
+2024-12-02T21:15:08.915Z info: Connection has been established successfully.
+2024-12-02T21:15:09.403Z info: Server is running on port 3000
+2024-12-02T21:15:09.471Z info: Connection has been established successfully.
+2024-12-02T21:17:24.356Z info: Server is running on port 3000
+2024-12-02T21:17:24.431Z info: Connection has been established successfully.
+2024-12-02T21:18:09.816Z info: Server is running on port 3000
+2024-12-02T21:18:09.896Z info: Connection has been established successfully.
+2024-12-02T21:18:09.950Z info: All models were synchronized successfully.
+2024-12-02T21:19:13.855Z info: Server is running on port 3000
+2024-12-02T21:19:13.926Z info: Connection has been established successfully.
+2024-12-02T21:19:13.935Z info: All models were synchronized successfully.
+2024-12-02T21:19:14.775Z info: Server is running on port 3000
+2024-12-02T21:19:14.851Z info: Connection has been established successfully.
+2024-12-02T21:19:14.858Z info: All models were synchronized successfully.
+2024-12-02T21:19:17.218Z info: Server is running on port 3000
+2024-12-02T21:19:17.296Z info: Connection has been established successfully.
+2024-12-02T21:19:17.304Z info: All models were synchronized successfully.
+2024-12-02T21:19:20.642Z info: Server is running on port 3000
+2024-12-02T21:19:20.723Z info: Connection has been established successfully.
+2024-12-02T21:19:20.731Z info: All models were synchronized successfully.
+2024-12-02T21:19:22.364Z info: Server is running on port 3000
+2024-12-02T21:19:22.440Z info: Connection has been established successfully.
+2024-12-02T21:19:22.449Z info: All models were synchronized successfully.
+2024-12-02T21:19:23.712Z info: Server is running on port 3000
+2024-12-02T21:19:23.789Z info: Connection has been established successfully.
+2024-12-02T21:19:23.797Z info: All models were synchronized successfully.
+2024-12-02T21:19:25.296Z info: Server is running on port 3000
+2024-12-02T21:19:25.380Z info: Connection has been established successfully.
+2024-12-02T21:19:25.389Z info: All models were synchronized successfully.
+2024-12-02T21:19:27.780Z info: Server is running on port 3000
+2024-12-02T21:19:27.860Z info: Connection has been established successfully.
+2024-12-02T21:19:27.870Z info: All models were synchronized successfully.
+2024-12-02T21:19:28.711Z info: Server is running on port 3000
+2024-12-02T21:19:28.906Z info: Connection has been established successfully.
+2024-12-02T21:19:28.915Z info: All models were synchronized successfully.
+2024-12-02T21:19:58.018Z info: Server is running on port 3000
+2024-12-02T21:19:58.096Z info: Connection has been established successfully.
+2024-12-02T21:19:58.105Z info: All models were synchronized successfully.
+2024-12-02T21:20:03.907Z info: Server is running on port 3000
+2024-12-02T21:20:03.983Z info: Connection has been established successfully.
+2024-12-02T21:20:03.991Z info: All models were synchronized successfully.
+2024-12-02T21:20:04.991Z info: Server is running on port 3000
+2024-12-02T21:20:05.064Z info: Connection has been established successfully.
+2024-12-02T21:20:05.072Z info: All models were synchronized successfully.
+2024-12-02T21:20:05.935Z info: Server is running on port 3000
+2024-12-02T21:20:06.121Z info: Connection has been established successfully.
+2024-12-02T21:20:06.128Z info: All models were synchronized successfully.
+2024-12-02T21:20:09.295Z info: Server is running on port 3000
+2024-12-02T21:20:09.376Z info: Connection has been established successfully.
+2024-12-02T21:20:09.386Z info: All models were synchronized successfully.
+2024-12-02T21:20:16.598Z info: Server is running on port 3000
+2024-12-02T21:20:16.667Z info: Connection has been established successfully.
+2024-12-02T21:20:16.675Z info: All models were synchronized successfully.
+2024-12-02T21:20:17.613Z info: Server is running on port 3000
+2024-12-02T21:20:17.702Z info: Connection has been established successfully.
+2024-12-02T21:20:17.711Z info: All models were synchronized successfully.
+2024-12-02T21:20:21.709Z info: Server is running on port 3000
+2024-12-02T21:20:21.793Z info: Connection has been established successfully.
+2024-12-02T21:20:21.803Z info: All models were synchronized successfully.
+2024-12-02T21:20:25.096Z info: Server is running on port 3000
+2024-12-02T21:20:25.303Z info: Connection has been established successfully.
+2024-12-02T21:20:25.314Z info: All models were synchronized successfully.
+2024-12-02T21:20:26.236Z info: Server is running on port 3000
+2024-12-02T21:20:26.310Z info: Connection has been established successfully.
+2024-12-02T21:20:26.319Z info: All models were synchronized successfully.
+2024-12-02T21:20:27.371Z info: Server is running on port 3000
+2024-12-02T21:20:27.442Z info: Connection has been established successfully.
+2024-12-02T21:20:27.450Z info: All models were synchronized successfully.
+2024-12-02T21:20:32.730Z info: Server is running on port 3000
+2024-12-02T21:20:32.832Z info: Connection has been established successfully.
+2024-12-02T21:20:32.841Z info: All models were synchronized successfully.
+2024-12-02T21:20:36.992Z info: Server is running on port 3000
+2024-12-02T21:20:37.064Z info: Connection has been established successfully.
+2024-12-02T21:20:37.072Z info: All models were synchronized successfully.
+2024-12-02T21:20:40.478Z info: Server is running on port 3000
+2024-12-02T21:20:40.549Z info: Connection has been established successfully.
+2024-12-02T21:20:40.557Z info: All models were synchronized successfully.
+2024-12-02T21:20:43.456Z info: Server is running on port 3000
+2024-12-02T21:20:43.528Z info: Connection has been established successfully.
+2024-12-02T21:20:43.536Z info: All models were synchronized successfully.

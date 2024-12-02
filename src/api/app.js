@@ -4,6 +4,9 @@ import logger from "./log/logger.js";
 import sequelize from "../config/SequelizeDB.js";
 import cors from "cors";
 
+// load entity
+import RoleEntity from "./models/RoleEntity.js";
+
 // controller
 // change its name to RoleController
 // import route from "./controller/RoleController.js";
@@ -19,6 +22,10 @@ sequelize
   .authenticate()
   .then(() => {
     logger.info("Connection has been established successfully.");
+    return sequelize.sync(); // Ensure tables are created
+  })
+  .then(() => {
+    logger.info("All models were synchronized successfully.");
   })
   .catch((error) => {
     logger.error("Unable to connect to the database:", error);
