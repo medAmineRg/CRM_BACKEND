@@ -6,6 +6,8 @@ import cors from "cors";
 
 // load entity
 import RoleEntity from "./models/RoleEntity.js";
+import MenuEntity from "./models/MenuEntity.js";
+import associations from "./models/index.js";
 
 // controller
 // change its name to RoleController
@@ -21,8 +23,9 @@ app.use(express.json());
 sequelize
   .authenticate()
   .then(() => {
+    associations();
     logger.info("Connection has been established successfully.");
-    return sequelize.sync(); // Ensure tables are created
+    return sequelize.sync({ alter: true }); // Ensure tables are created
   })
   .then(() => {
     logger.info("All models were synchronized successfully.");

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  web:
+    image: CRM_API
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=crm
+      - DATABASE_USER=crm
+      - DATABASE_PASSWORD=example
+    volumes:
+      - ./app.log:/app/app.log
+
+  db:
+    image: POSTGRES:16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: crm
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: crm
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
