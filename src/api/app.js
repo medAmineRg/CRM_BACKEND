@@ -14,6 +14,7 @@ import associations from "./models/index.js";
 // import route from "./controller/RoleController.js";
 import RoleController from "./controller/RoleController.js";
 import MenuController from "./controller/MenuController.js";
+import AuthController from "./controller/AuthController.js";
 
 configDotenv();
 cors();
@@ -37,6 +38,7 @@ sequelize
 
 app.use(RoleController);
 app.use(MenuController);
+app.use(AuthController);
 
 const server = app.listen(process.env.PORT, () => {
   logger.info(`Server is running on port ${process.env.PORT}`);
