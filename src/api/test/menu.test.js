@@ -1,8 +1,9 @@
 import request from "supertest";
 import MenuEntity from "../models/MenuEntity.js";
-import { startServer, closeServer, app } from "../app.js";
+import { server, app } from "../app.js";
 import sequelize from "../../config/SequelizeDB.js";
 import associations from "../models/index.js";
+import logger from "../log/logger.js";
 
 describe("MENU API TEST", () => {
   // Establish connection before all tests
@@ -17,7 +18,7 @@ describe("MENU API TEST", () => {
       // Sync models, alter existing tables
       await sequelize.sync({ alter: true });
     } catch (error) {
-      console.error("Setup error:", error);
+      logger.error("Setup error:", error);
       throw error;
     }
   });
@@ -30,21 +31,20 @@ describe("MENU API TEST", () => {
         await MenuEntity.truncate({ cascade: true });
       }
     } catch (error) {
-      console.error("Truncate error:", error);
+      logger.error("Truncate error:", error);
     }
   });
 
   // Properly close connections after all tests
   afterAll(async () => {
     try {
-      startServer(3001);
       // Close Sequelize connection
       await sequelize.close();
 
       // Close server
-      closeServer();
+      server.close();
     } catch (error) {
-      console.error("Cleanup error:", error);
+      logger.error("Cleanup error:", error);
     }
   });
 

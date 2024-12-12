@@ -38,23 +38,8 @@ sequelize
 app.use(RoleController);
 app.use(MenuController);
 
-let server;
+const server = app.listen(process.env.PORT, () => {
+  logger.info(`Server is running on port ${process.env.PORT}`);
+});
 
-const startServer = (port = process.env.PORT) => {
-  // Only create server if not already created
-  if (!server) {
-    server = app.listen(port, () => {
-      logger.info(`Server is running on port ${port}`);
-    });
-  }
-  return server;
-};
-
-const closeServer = () => {
-  if (server) {
-    server.close();
-    server = null;
-  }
-};
-
-export { startServer, closeServer, app };
+export { server, app };

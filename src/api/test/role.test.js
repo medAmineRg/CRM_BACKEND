@@ -1,15 +1,14 @@
 import request from "supertest";
 import RoleEntity from "../models/RoleEntity.js";
-import { startServer, app, closeServer } from "../app.js";
+import { app, server } from "../app.js";
 import sequelize from "../../config/SequelizeDB.js";
 import associations from "../models/index.js";
+import logger from "../log/logger.js";
 
 describe("ROLE API TEST", () => {
   // Establish connection before all tests
   beforeAll(async () => {
     try {
-      startServer(3002);
-
       // Ensure connection is open
       await sequelize.authenticate();
 
@@ -17,9 +16,9 @@ describe("ROLE API TEST", () => {
       associations();
 
       // Sync models, alter existing tables
-      await sequelize.sync({ alter: true });
+      await sequelize.sync({ force: true });
     } catch (error) {
-      console.error("Setup error:", error);
+      logger.error("Setup error:", error);
       throw error;
     }
   });
@@ -32,7 +31,7 @@ describe("ROLE API TEST", () => {
         await RoleEntity.truncate({ cascade: true });
       }
     } catch (error) {
-      console.error("Truncate error:", error);
+      logger.error("Truncate error:", error);
     }
   });
 
@@ -43,9 +42,9 @@ describe("ROLE API TEST", () => {
       await sequelize.close();
 
       // Close server
-      closeServer();
+      server.close();
     } catch (error) {
-      console.error("Cleanup error:", error);
+      logger.error("Cleanup error:", error);
     }
   });
 

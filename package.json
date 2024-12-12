@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./src/api/app.js",
     "dev": "nodemon ./src/api/app.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
