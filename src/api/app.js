@@ -38,6 +38,8 @@ sequelize
 app.use(RoleController);
 app.use(MenuController);
 
-app.listen(process.env.PORT, () => {
+const server = app.listen(process.env.PORT, () => {
   logger.info(`Server is running on port ${process.env.PORT}`);
 });
+
+export { server, app };
