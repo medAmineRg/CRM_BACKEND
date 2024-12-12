@@ -1,6 +1,6 @@
-import request from 'supertest';
+import request from "supertest";
 import RoleEntity from "../models/RoleEntity.js";
-import { server, app } from "../app.js";
+import { startServer, app, closeServer } from "../app.js";
 import sequelize from "../../config/SequelizeDB.js";
 import associations from "../models/index.js";
 
@@ -8,16 +8,18 @@ describe("ROLE API TEST", () => {
   // Establish connection before all tests
   beforeAll(async () => {
     try {
+      startServer(3002);
+
       // Ensure connection is open
       await sequelize.authenticate();
-      
+
       // Set up associations
       associations();
-      
+
       // Sync models, alter existing tables
       await sequelize.sync({ alter: true });
     } catch (error) {
-      console.error('Setup error:', error);
+      console.error("Setup error:", error);
       throw error;
     }
   });
@@ -30,7 +32,7 @@ describe("ROLE API TEST", () => {
         await RoleEntity.truncate({ cascade: true });
       }
     } catch (error) {
-      console.error('Truncate error:', error);
+      console.error("Truncate error:", error);
     }
   });
 
@@ -39,16 +41,11 @@ describe("ROLE API TEST", () => {
     try {
       // Close Sequelize connection
       await sequelize.close();
-      
+
       // Close server
-      return new Promise((resolve, reject) => {
-        server.close((err) => {
-          if (err) reject(err);
-          else resolve();
-        });
-      });
+      closeServer();
     } catch (error) {
-      console.error('Cleanup error:', error);
+      console.error("Cleanup error:", error);
     }
   });
 
@@ -83,9 +80,7 @@ describe("ROLE API TEST", () => {
 
   describe("POST /roles", () => {
     it("should create a new role", async () => {
-      const res = await request(app)
-        .post("/roles")
-        .send({ name: "New Role" });
+      const res = await request(app).post("/roles").send({ name: "New Role" });
       expect(res.statusCode).toBe(201);
       expect(res.body).toHaveProperty("name", "New Role");
     });
@@ -107,7 +102,9 @@ describe("ROLE API TEST", () => {
     });
 
     it("should return 404 if role not found", async () => {
-      const res = await request(app).put("/roles/999").send({ name: "Updated Role" });
+      const res = await request(app)
+        .put("/roles/999")
+        .send({ name: "Updated Role" });
       expect(res.statusCode).toBe(404);
     });
   });
