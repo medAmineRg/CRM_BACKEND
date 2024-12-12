@@ -23,6 +23,11 @@ export const createMenu = async (req, res) => {
   if (error) return res.status(400).send({ message: error.details[0].message });
 
   const { name, permissions } = req.body;
+  // Check if menu already exists
+  const existingMenu = await MenuEntity.findOne({ where: { name } });
+  if (existingMenu) {
+    return res.status(409).json({ error: "Menu already exists" });
+  }
   const menu = await MenuEntity.create({ name, permissions });
   return res.status(201).json(menu);
 };
@@ -31,12 +36,17 @@ export const createMenu = async (req, res) => {
 export const updateMenu = async (req, res) => {
   const { id } = req.params;
   const { name, permissions } = req.body;
+  console.log(name, permissions);
   const menu = await MenuEntity.findByPk(id);
   if (!menu) {
     return res.status(404).json({ error: "Menu not found" });
   }
-  menu.name = name;
-  menu.permissions = permissions;
+  if (name) {
+    menu.name = name;
+  }
+  if (permissions) {
+    menu.permissions = permissions;
+  }
   await menu.save();
   return res.status(200).json(menu);
 };

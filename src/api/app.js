@@ -13,6 +13,7 @@ import associations from "./models/index.js";
 // change its name to RoleController
 // import route from "./controller/RoleController.js";
 import RoleController from "./controller/RoleController.js";
+import MenuController from "./controller/MenuController.js";
 
 configDotenv();
 cors();
@@ -25,7 +26,7 @@ sequelize
   .then(() => {
     associations();
     logger.info("Connection has been established successfully.");
-    return sequelize.sync({ alter: true }); // Ensure tables are created
+    return sequelize.sync({ alter: true });
   })
   .then(() => {
     logger.info("All models were synchronized successfully.");
@@ -35,6 +36,7 @@ sequelize
   });
 
 app.use(RoleController);
+app.use(MenuController);
 
 app.listen(process.env.PORT, () => {
   logger.info(`Server is running on port ${process.env.PORT}`);

@@ -13,6 +13,7 @@ const MenuEntity = sequelize.define(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     permissions: {
       type: DataTypes.ARRAY(DataTypes.STRING),
