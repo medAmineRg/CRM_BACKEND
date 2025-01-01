@@ -1,20 +1,31 @@
-FROM node:18
+# Build stage
+FROM node:18.20.4 AS builder
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
+# Install build dependencies
+RUN apt-get update && apt-get install -y \
+    python3 \
+    make \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy package files
 COPY package*.json ./
 COPY yarn.lock ./
 
 # Install dependencies
-RUN npm install
+RUN yarn install --force
+RUN npm rebuild bcrypt --build-from-source
 
-# Copy the rest of the application code to the working directory
+# Final stage
+FROM node:18.20.4-slim
+
+WORKDIR /app
+
+COPY --from=builder /app/node_modules ./node_modules
 COPY . .
 
-# Expose the port the app runs on
 EXPOSE 3000
 
-# Define the command to run the app
 CMD ["npm", "start"]

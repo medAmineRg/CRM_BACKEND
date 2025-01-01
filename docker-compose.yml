@@ -2,29 +2,33 @@ version: '3.8'
 
 services:
   web:
-    image: CRM_API
+    image: crm-api
     build: .
     ports:
       - "3000:3000"
     depends_on:
       - db
     environment:
-      - DATABASE_HOST=crm
-      - DATABASE_USER=crm
-      - DATABASE_PASSWORD=example
+      - PORT=3000
+      - DB_HOST=db
+      - DB_USER=crm
+      - DB_PASSWORD=crmPassDb@2025
+      - DB_NAME=crm
+      - DB_PORT=5432
+      - TOKEN_SECRET=secret
     volumes:
       - ./app.log:/app/app.log
 
   db:
-    image: POSTGRES:16
+    image: postgres:12
     ports:
       - "5432:5432"
     environment:
       POSTGRES_USER: crm
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: crmPassDb@2025
       POSTGRES_DB: crm
     volumes:
       - db-data:/var/lib/postgresql/data
 
 volumes:
-  db-data:
+  db-data: {}
