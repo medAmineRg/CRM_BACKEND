@@ -22,13 +22,13 @@ export const createMenu = async (req, res) => {
   const { error } = menuSchemaValidation.validate(req.body);
   if (error) return res.status(400).send({ message: error.details[0].message });
 
-  const { name, permissions } = req.body;
+  const { name } = req.body;
   // Check if menu already exists
   const existingMenu = await MenuEntity.findOne({ where: { name } });
   if (existingMenu) {
     return res.status(409).json({ error: "Menu already exists" });
   }
-  const menu = await MenuEntity.create({ name, permissions });
+  const menu = await MenuEntity.create(req.body);
   return res.status(201).json(menu);
 };
 

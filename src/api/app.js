@@ -7,6 +7,8 @@ import cors from "cors";
 // load entity
 import RoleEntity from "./models/RoleEntity.js";
 import MenuEntity from "./models/MenuEntity.js";
+import AuthEntity from "./models/AuthEntity.js";
+import EmployeeEntity from "./models/EmployeeEntity.js";
 import associations from "./models/index.js";
 
 // controller
@@ -15,6 +17,7 @@ import associations from "./models/index.js";
 import RoleController from "./controller/RoleController.js";
 import MenuController from "./controller/MenuController.js";
 import AuthController from "./controller/AuthController.js";
+import EmployeeController from "./controller/EmployeeController.js";
 
 configDotenv();
 cors();
@@ -27,6 +30,7 @@ sequelize
   .then(() => {
     associations();
     logger.info("Connection has been established successfully.");
+    // drop all tables and recreate them
     return sequelize.sync({ alter: true });
   })
   .then(() => {
@@ -39,6 +43,7 @@ sequelize
 app.use(RoleController);
 app.use(MenuController);
 app.use(AuthController);
+app.use(EmployeeController);
 
 const server = app.listen(process.env.PORT, () => {
   logger.info(`Server is running on port ${process.env.PORT}`);
